@@ -1,9 +1,8 @@
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-const newsApiBaseUrl =
-  process.env.NODE_ENV === "production"
-    ? "https://nomoreparties.co/news/v2/everything"
-    : "https://newsapi.org/v2/everything";
+const newsApiBaseUrl = import.meta.env.PROD
+  ? "https://nomoreparties.co/news/v2/everything"
+  : "https://newsapi.org/v2/everything";
 
 const getNews = (query) => {
   const fromDate = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)

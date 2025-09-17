@@ -1,28 +1,29 @@
-// src/utils/Api.jsx
 import { saveArticle, removeArticle, getSavedArticles } from "./localStorage";
 
 // Initial mock articles for development
 const articles = [
   {
     isSaved: true,
-    title: "Breaking News: Tech Innovation in 2024",
-    url: "https://example.com/tech-innovation-2024",
-    urlToImage: "https://via.placeholder.com/300",
+    title: "Gizmodos Best of IFA 2025 Awards: See the Winners",
+    url: "https://gizmodo.com/best-of-ifa-2025-awards-winners-2000654651",
+    urlToImage:
+      "https://gizmodo.com/app/uploads/2025/09/Gizmodo-IFA-2025-Featured-Image-1-960x640.jpg",
     keyword: "Technology",
-    content:
-      "The latest advancements in AI and robotics are reshaping the industry...",
-    pubDate: "2024-02-10",
-    author: "John Doe",
+    content: "This is the tech that most impressed us at IFA 2025 in Berlin.",
+    pubDate: " Updated September 8, 2025",
+    author: "Gizmodo Staff",
   },
   {
     isSaved: true,
-    title: "Finance: Stock Market Hits Record Highs",
-    url: "https://example.com/stock-market-highs",
-    urlToImage: "https://via.placeholder.com/300",
+    title:
+      "Robinhood Is Building a Social Network for Following Market Movers Trades",
+    url: "https://gizmodo.com/robinhood-launches-social-feed-stock-trades-2000656886",
+    urlToImage:
+      "https://gizmodo.com/app/uploads/2025/09/robin_hood-960x640.jpg",
     keyword: "Finance",
-    content: "The stock market soared to new highs...",
-    pubDate: "2024-02-08",
-    author: "Michael Johnson",
+    content: "Robinhood is jumping on the finance influencer bandwagon",
+    pubDate: "September 10, 2025",
+    author: "Ece Yildirim",
   },
 ].map((article) => ({ ...article, _id: crypto.randomUUID() }));
 
@@ -37,7 +38,7 @@ const getArticles = async () => {
     setTimeout(() => {
       const savedArticles = getSavedArticles();
       resolve(savedArticles);
-    }, 500); // Simulate delay
+    }, 500);
   });
 };
 

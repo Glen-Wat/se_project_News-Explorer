@@ -15,7 +15,7 @@ function SavedCardsArray({
         <ul className="saved-cards-array__list">
           {savedArticles.map((article) => (
             <li
-              key={article._id || article.url} // ✅ STEP 1 FIX HERE
+              key={article._id || article.url}
               className="saved-cards-array__item"
             >
               <NewsCard

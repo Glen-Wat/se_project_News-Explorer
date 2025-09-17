@@ -39,7 +39,7 @@ export const signUp = async (name, email, password) => {
   const userData = { name, email, password, token };
 
   localStorage.setItem("user", JSON.stringify(userData));
-  localStorage.setItem("jwt", token); // Save token for session
+  localStorage.setItem("jwt", token);
 
   return Promise.resolve({
     message: "Registration successful!",

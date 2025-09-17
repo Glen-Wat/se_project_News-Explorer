@@ -164,6 +164,7 @@ function App() {
       <div className="app">
         <div className="page container">
           <Routes location={location} key={location.pathname}>
+            {/* Public Home Route */}
             <Route
               path="/"
               element={
@@ -209,6 +210,7 @@ function App() {
               }
             />
 
+            {/* Protected Saved News Route */}
             <Route
               path="/saved-news"
               element={
@@ -240,6 +242,7 @@ function App() {
             />
           </Routes>
 
+          {/* Global Components */}
           <Footer />
 
           <LoginModal
@@ -250,9 +253,7 @@ function App() {
             secondaryBtnText="Sign up"
             onSecondaryBtnClick={() => {
               closeAllModals();
-              setTimeout(() => {
-                setIsRegisterModalOpen(true);
-              }, 0);
+              setTimeout(() => setIsRegisterModalOpen(true), 0);
             }}
             title="Sign in"
           />
@@ -266,9 +267,7 @@ function App() {
             secondaryBtnText="Sign in"
             onSecondaryBtnClick={() => {
               closeAllModals();
-              setTimeout(() => {
-                setIsLoginModalOpen(true);
-              }, 0);
+              setTimeout(() => setIsLoginModalOpen(true), 0);
             }}
           />
 

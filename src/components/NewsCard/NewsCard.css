@@ -53,7 +53,7 @@
   text-align: left;
 
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Change this to however many lines you want */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

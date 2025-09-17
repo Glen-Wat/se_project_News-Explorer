@@ -13,7 +13,7 @@ function AppRouter() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="*" element={<App />}>
           <Route index element={<Main />} />
           <Route
             path="saved-news"
@@ -30,3 +30,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AppRouter />
   </React.StrictMode>
 );
+
+export default AppRouter;

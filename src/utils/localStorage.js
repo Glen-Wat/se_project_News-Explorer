@@ -10,14 +10,14 @@ const getSavedArticles = () => {
   }
 };
 
-// Save an article to localStorage
+// Save to localStorage
 const saveArticle = (article) => {
   try {
     const savedArticles = getSavedArticles();
     // Add keyword if it doesn't exist
     const articleToSave = { ...article, keyword: article.keyword || "General" };
 
-    // Check if article already exists to prevent duplicates
+    // Check if article exists so no doubles
     if (!savedArticles.some((saved) => saved.url === article.url)) {
       const updatedArticles = [...savedArticles, articleToSave];
       localStorage.setItem(SAVED_ARTICLES_KEY, JSON.stringify(updatedArticles));
@@ -30,7 +30,7 @@ const saveArticle = (article) => {
   }
 };
 
-// Remove an article from localStorage
+// Remove article from localStorage
 const removeArticle = (articleUrl) => {
   try {
     const savedArticles = getSavedArticles();

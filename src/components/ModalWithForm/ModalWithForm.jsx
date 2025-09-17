@@ -11,8 +11,8 @@ function ModalWithForm({
   secondaryBtnText,
   onSecondaryBtnClick,
   isDisabled,
-  containerClassName = "", // Modifier class for container styling
-  hideDefaultButton = false, // Allows optional removal of submit buttons
+  containerClassName = "",
+  hideDefaultButton = false,
 }) {
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("modal")) {
@@ -24,7 +24,7 @@ function ModalWithForm({
     e.stopPropagation();
   };
 
-  useEscape(isOpen, onClose); // ✅ Escape key closes modal
+  useEscape(onClose);
 
   if (!isOpen) return null;
 

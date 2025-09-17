@@ -12,9 +12,6 @@ function SavedNews({
 }) {
   const { currentUser } = useContext(UserContext);
 
-  console.log("SavedNews - savedArticles:", savedArticles);
-  console.log("SavedNews - currentUser:", currentUser);
-
   const keywords = useMemo(() => {
     const allKeywords = savedArticles.map((article) => article.keyword);
     const uniqueKeywords = [...new Set(allKeywords)];
