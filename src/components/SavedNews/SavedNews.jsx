@@ -19,7 +19,7 @@ function SavedNews({
   }, [savedArticles]);
 
   return (
-    <main className="saved__news">
+    <main className="saved-news">
       <SavedNewsHeader
         isLoggedIn={isLoggedIn}
         currentUser={currentUser}

@@ -154,7 +154,7 @@
   background: none;
   border: none;
   cursor: url("/src/assets/hand-cursor.png") 4 2, pointer;
-  background-image: url("../../assets/mobile-menu-icon.svg");
+  background-image: url("../../assets/mobile-menu.svg");
 }
 
 .navigation__menu-close-btn {
@@ -165,7 +165,7 @@
 }
 
 .navigation__menu-button-saved {
-  background-image: url("../../assets/mobile-menu-icon-dark.svg");
+  background-image: url("../../assets/mobile-menu-dark.svg");
 }
 
 .navigation__menu-button-saved.navigation__menu-close-btn {
@@ -183,7 +183,7 @@
 .navigation__mini-button {
   display: none; /* Hidden by default */
   position: absolute;
-  top: 20px;
+  top: 8px;
   right: 16px;
   padding: 6px 12px;
   font-size: 14px;

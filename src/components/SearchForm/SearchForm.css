@@ -28,7 +28,7 @@
 .search-form__button {
   width: 168px;
   height: 64px;
-  margin-left: -60px; /* Creates the overlap */
+  margin-left: -168px; /* Creates the overlap */
   border-radius: 100px;
   background-color: #2f71e5;
   color: white;

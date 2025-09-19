@@ -85,7 +85,7 @@
 .search-results__message {
   font-size: 26px;
   color: #1a1b22;
-  font-family: "Roboto slab", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
 }
 
@@ -105,7 +105,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -124,6 +124,16 @@
   height: 64px;
 }
 
+/* force exactly 3 cards per row on desktop */
+@media screen and (min-width: 1360px) {
+  .news-card__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
 /*Tablet View (1024px–600px): slightly smaller cards */
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .news-card__list {
@@ -133,17 +143,17 @@
 
 /* === Tablet View (768px) === */
 @media screen and (max-width: 768px) {
-  .hero {
+  .home {
     padding: 64px 40px;
     gap: 16px;
   }
 
-  .hero__title {
+  .home__title {
     font-size: 42px;
     margin-bottom: 16px;
   }
 
-  .hero__subtitle {
+  .home__subtitle {
     font-size: 16px;
     margin-bottom: 24px;
     max-width: 100%;
@@ -175,19 +185,18 @@
   .news-card__list {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 12px;
-    padding: 0 16px;
+    padding: 0;
   }
 }
 
 /* === Mobile View (320px) === */
 @media screen and (max-width: 480px) {
-  .hero {
+  .home {
     padding: 48px 16px;
-    gap: 12px;
   }
 
-  .hero__title {
-    width: 285px;
+  .home__title {
+    max-width: 100%;
     font-size: 28px;
     font-family: "Roboto Slab", serif;
     font-weight: 400;
@@ -198,8 +207,8 @@
     color: white;
   }
 
-  .hero__subtitle {
-    width: 285px;
+  .home__subtitle {
+    max-width: 100%;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -248,7 +257,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 40px;
-    padding: 0 16px;
+    padding: 0;
   }
 
   .show-more {
