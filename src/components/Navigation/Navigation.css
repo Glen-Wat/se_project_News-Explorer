@@ -49,12 +49,13 @@
 }
 
 .navigation__link-wrapper_saved.navigation__link-wrapper_active::after {
-  background-color: #1a1b22;
+  color: #1a1b22;
 }
 
 .navigation__link-wrapper_saved {
   border-bottom: 3px solid #1a1b22;
   width: 178px;
+  color: #1a1b22;
 }
 
 .navigation__logo {
@@ -92,7 +93,7 @@
 }
 
 .navigation__saved-link {
-  color: #b6bcbf;
+  color: rgba(182, 188, 191, 1);
   margin-left: 12px;
 }
 

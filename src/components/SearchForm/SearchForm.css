@@ -19,6 +19,7 @@
   background-color: #ffffff;
   box-sizing: border-box;
   z-index: 1;
+  min-width: 0;
 }
 
 .search-form__input::placeholder {
@@ -53,6 +54,11 @@
   .search-section {
     width: 100%;
   }
+  .search-form__input {
+    width: 100%;
+    max-width: 690px;
+    min-width: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -65,7 +71,8 @@
   }
 
   .search-form__input {
-    width: 288px;
+    width: 100%;
+    max-width: 288px;
     height: 56px;
     padding: 0 16px;
     margin-bottom: 16px; /* 16px gap to button */
