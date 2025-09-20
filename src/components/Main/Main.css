@@ -140,10 +140,6 @@
     grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
     max-width: 100%;
   }
-
-  * {
-    outline: 1px solid red;
-  }
 }
 
 /* === Tablet View (768px) === */
@@ -154,9 +150,6 @@
     max-width: 100%;
   }
 
-  * {
-    outline: 1px solid red;
-  }
   .home__title {
     font-size: 42px;
     margin-bottom: 16px;
